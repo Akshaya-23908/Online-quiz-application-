@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizMaster - Online Quiz Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="logo">Q</div>
+      <div><h1>QuizMaster</h1><p>Learn. Answer. Improve.</p></div>
+    </header>
+    <section id="home" class="card">
+      <span class="eyebrow">WELCOME TO QUIZMASTER</span>
+      <h2>Test your knowledge</h2>
+      <p>Choose a category and answer multiple-choice questions within the time limit.</p>
+      <label for="category">Quiz category</label>
+      <select id="category">
+        <option value="general">General Knowledge</option>
+        <option value="web">Web Development</option>
+        <option value="computer">Computer Science</option>
+      </select>
+      <button id="startBtn">Start Quiz</button>
+      <p class="small">5 questions • 60 seconds • Instant result</p>
+    </section>
+    <section id="quiz" class="card hidden">
+      <div class="quiz-head"><span id="categoryLabel">General Knowledge</span><span id="timer">60s</span></div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <p id="questionCount" class="small">Question 1 of 5</p>
+      <h2 id="questionText"></h2>
+      <div id="options" class="options"></div>
+      <div class="actions"><button id="prevBtn" class="secondary">Previous</button><button id="nextBtn">Next</button></div>
+    </section>
+    <section id="result" class="card hidden">
+      <span class="eyebrow">QUIZ COMPLETED</span><h2>Your Result</h2>
+      <div class="score" id="score">0/5</div><p id="feedback"></p>
+      <button id="restartBtn">Try Again</button>
+    </section>
+    <footer>QuizMaster • Online Quiz Application</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
